@@ -17,4 +17,5 @@ class UserService(
         val responseType = object : ParameterizedTypeReference<List<UserDto>>() {}
         return restTemplate.exchange("$dbMicroServiceUrl/$endPoint", HttpMethod.GET, null, responseType).body ?: emptyList()
     }
+
 }
